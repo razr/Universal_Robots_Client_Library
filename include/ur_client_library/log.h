@@ -20,6 +20,10 @@
 #include <inttypes.h>
 #include <memory>
 
+#ifdef ERROR
+#undef ERROR
+#endif
+
 #define URCL_LOG_DEBUG(...) urcl::log(__FILE__, __LINE__, urcl::LogLevel::DEBUG, __VA_ARGS__)
 #define URCL_LOG_WARN(...) urcl::log(__FILE__, __LINE__, urcl::LogLevel::WARN, __VA_ARGS__)
 #define URCL_LOG_INFO(...) urcl::log(__FILE__, __LINE__, urcl::LogLevel::INFO, __VA_ARGS__)

@@ -47,7 +47,9 @@ void TCPSocket::setOptions(int socket_fd)
 {
   int flag = 1;
   setsockopt(socket_fd, IPPROTO_TCP, TCP_NODELAY, &flag, sizeof(int));
+#if defined(TCP_QUICKACK)
   setsockopt(socket_fd, IPPROTO_TCP, TCP_QUICKACK, &flag, sizeof(int));
+#endif
 
   if (recv_timeout_ != nullptr)
   {

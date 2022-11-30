@@ -48,6 +48,9 @@ enum class ToolVoltage : int
 /*!
  * \brief Possible values for th parity flag
  */
+#ifdef NONE
+#undef NONE
+#endif
 enum class Parity : int
 {
   NONE = 0,

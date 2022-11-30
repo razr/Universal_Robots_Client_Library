@@ -31,12 +31,14 @@
 
 #include <netdb.h>
 #include <sys/socket.h>
+#include <sys/select.h>
 #include <sys/types.h>
 #include <unistd.h>
 
 #include <atomic>
 #include <functional>
 #include <thread>
+#include <vector>
 
 namespace urcl
 {

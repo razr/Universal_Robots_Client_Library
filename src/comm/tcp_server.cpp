@@ -33,6 +33,7 @@
 
 #include <sstream>
 #include <strings.h>
+#include <netinet/ip.h>
 #include <cstring>
 #include <fcntl.h>
 #include <algorithm>

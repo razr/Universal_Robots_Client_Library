@@ -16,6 +16,7 @@
 #include <cstdint>
 #include <ctime>
 #include <type_traits>
+#include <semaphore.h>
 
 // Platform detection
 #if defined(__INTEL_COMPILER)
@@ -543,7 +544,7 @@ public:
     }
   }
 };
-#elif defined(__unix__)
+#elif defined(__unix__) || defined(__VXWORKS__)
 //---------------------------------------------------------
 // Semaphore (POSIX, Linux)
 //---------------------------------------------------------
